@@ -17,3 +17,6 @@ Next, run `sh run.sh`.
 - Runs the `web_app.py` 
 
 As we just mounted the current folder to a folder inside the container, we can do some changes in code or model, and just re-run `run.sh` to see the effect, no need to rebuild the container.
+
+Here is the demo of web application:
+![demo](demo.gif)
