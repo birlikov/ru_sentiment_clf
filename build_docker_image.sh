@@ -1,0 +1,1 @@
+docker build -f Dockerfile -t ru_sentiment_clf_image .

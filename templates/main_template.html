@@ -1,0 +1,45 @@
+<html>
+  <head>
+     <title>ru_sentiment_clf</title>
+     <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=2.0">
+
+  </head>
+
+  <body>
+
+    <div class=container"><br>
+    <div class="row align-items-center justify-content-center">
+    <div class="col-md-6">
+      <form  action="" method="post" role="form">
+        {{ form.csrf }}
+        <div class="form-group">
+        <br>
+          <label for="textfield"><br>Text to classify:</label>
+          <textarea class="form-control" id="textfield" name="textfield" rows="4" placeholder="Type some text in Russian here, например, да это полная туфта!"></textarea>
+	    <br>
+        <center>
+          <button type="submit" class="btn btn-success">classify</button>
+        </center>
+        </div>
+      </form>
+      <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+
+              {% for message in messages %}
+                <div class="alert alert-info">
+                <strong></strong> {{ message[1] }}
+                </div>
+
+             {% endfor %}
+            {% endif %}
+        {% endwith %}
+      <br>
+    </div>
+    </div>
+    </div>
+
+  </body>
+</html>
